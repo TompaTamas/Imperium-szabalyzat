@@ -30,11 +30,6 @@ h1 {
     font-weight: bold;
 }
 
-.discord-btn:hover {
-    background-color: #f0d000;
-    transition: background-color 0.3s;
-}
-
 .search-section {
     text-align: center;
     margin-bottom: 20px;
@@ -47,55 +42,28 @@ h1 {
     border: 1px solid gold;
     background-color: black;
     color: gold;
-    border-radius: 5px;
-}
-
-#searchInput:focus {
-    outline: none;
-    border-color: #f0d000;
-    box-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
 }
 
 .accordion, .sub-accordion {
     margin-bottom: 10px;
     border: 1px solid gold;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.accordion summary, .sub-accordion summary {
+summary {
     background-color: rgba(255, 215, 0, 0.1);
-    padding: 15px;
+    padding: 10px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    user-select: none;
-}
-
-.accordion summary:hover, .sub-accordion summary:hover {
-    background-color: rgba(255, 215, 0, 0.2);
-}
-
-.accordion[open] summary, .sub-accordion[open] summary {
-    border-bottom: 1px solid gold;
-    border-radius: 5px 5px 0 0;
 }
 
 .accordion-content {
-    padding: 15px;
-    line-height: 1.6;
-}
-
-.accordion-content p {
-    margin: 10px 0;
-    text-align: justify;
+    padding: 10px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 10px 0;
 }
 
 th, td {
@@ -106,24 +74,4 @@ th, td {
 
 th {
     background-color: rgba(255, 215, 0, 0.1);
-    font-weight: bold;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    
-    h1 {
-        font-size: 1.5em;
-    }
-    
-    #searchInput {
-        width: 95%;
-    }
-    
-    .accordion-content {
-        padding: 10px;
-    }
 }
