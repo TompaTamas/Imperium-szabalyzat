@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperium Roleplay Szabályzat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- A logo helye: mivel a promptban leírt PNG alapján, itt egy placeholder SVG-t használok az arany logo reprezentálására fekete háttéren. Valódi képet base64-ben vagy fájlként lehetne hozzáadni. -->
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="black"/>
+                <text x="50" y="100" font-size="40" fill="gold" font-weight="bold">IMPERIUM</text>
+                <text x="50" y="140" font-size="30" fill="gold">ROLEPLAY</text>
+                <!-- Laurel and crown placeholder -->
+                <path d="M80 50 L100 70 L120 50" stroke="gold" fill="none"/>
+                <path d="M80 50 L60 70 L40 50" stroke="gold" fill="none"/>
+                <circle cx="100" cy="150" r="10" fill="gold"/>
+            </svg>
+        </div>
+        <h1>Imperium Roleplay Szabályzat</h1>
+        <a href="https://discord.gg/sRedAXTCa9" class="discord-btn">Csatlakozz a Discordhoz</a>
+    </header>
+
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="Keresés a szabályzatban..." onkeyup="searchRules()">
+    </section>
+
+    <main>
+        <section id="rules">
+            <!-- Általános Szabályok szakasz -->
+            <details class="accordion">
+                <summary>I. Általános Szabályok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>🔹 A szabályzat elfogadása</summary>
+                        <p>A szerverhez való csatlakozással automatikusan elfogadod a szabályzat minden pontját. Az „én nem tudtam” nem mentség – a szabályok nem ismerete nem mentesít a következmények alól. A vezetőség bármikor módosíthatja a szabályzatot, és különleges helyzetekben egyedi döntést hozhat.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 Szerepjáték alapszabályok</summary>
+                        <p>❌ Nem léphetsz ki folyamatban lévő RP-szituációból, és nem tagadhatsz meg RP-t, mert azzal akadályoznád mások játékát. ❌ Alap (kopter) skint használni tilos – regisztráció után kötelező a saját karakteredre szabott skint hordanod. ❌ Bokorból lövés csak akkor megengedett, ha a karaktered látható a lövés közben. ❌ Az alábbi szabályszegések TILOSAK: PG, MG, RK, DM, DM generálás, NRK, DB, VDM, NonRP, SK, ForceRP. ❌ Vagyon szétosztás indokolatlanul tilos.</p>
+                    </details>
+                    <!-- További alpontok hasonlóan... (teljes tartalom a TXT-ből) -->
+                    <details class="sub-accordion">
+                        <summary>🔹 Járműhasználat – Gumik korlátozása</summary>
+                        <p>2 keréknél több defektes gumival nem vezethetsz! 🚙 10 kerekű: max. 5 kerék hiányozhat 🚛 6 kerekű: max. 3 kerék hiányozhat 🏍️ 2 kerekű: max. 1 kerék hiányozhat</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 Tiltott RP-helyzetek</summary>
+                        <p>❌ Öngyilkos RP szigorúan tilos (kivéve CK esetén). Ide tartozik: Autóval szándékosan vízbe ugratás Direkt frontális karambol Kormány hirtelen más elé rántása / szembesávban közlekedés Magas helyről való leugrás</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 Vízben tartózkodás</summary>
+                        <p>🌊 Búvárruha nélkül: Havazáskor max. 5 perc Normál időben max. 10 perc 🌊 Búvárruhával: max. 20 perc</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 OOC (Out of Character) szabályok</summary>
+                        <p>❌ OOC beszélgetés tilos a szerveren (kivéve admin jelenlétében, „TAG” jelöléssel). ❌ OOC hazugság – komoly következményekkel járhat, akár kitiltással. ❌ OOC kereskedelem minden formában TILOS. ❌ Más szerver hirdetése = instant ban. ❌ Airsoft és FFA pályáról tilos tárgyat (fegyver, lőszer) kivinni – ez is azonnali bant von maga után.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 Technikai tiltások</summary>
+                        <p>Tilos minden olyan mod, texture pack vagy program, ami előnyt ad: NO PROP | NO NIGHT | NO WEATHER | NO FOG | BLOODFX | KILLFX | TRACER | CROSSHAIR | ANTI AFK | AUTOCLICKER | MINIMAP MOD | FEGYVER SKIN | FOV CHANGER | DMG INDICATOR ❌ A GTA hibáinak kihasználása TILOS! pl.: F gombbal kiütés a járműből, „glitch roll”, „speed boost”, szándékos összeesés. ❌ Animációk bugolása sem megengedett (pl. falon átbújás, tűzharcban animáció kihasználása).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🔹 Egyéb tilalmak</summary>
+                        <p>❌ Kórházi ellátás után nem mehetsz vissza a lövöldözés helyszínére. ❌ Nem fenyegetheted az admint. ❌ Account megosztása TILOS – ha mégis megosztod, vállalod a következményeket. ❌ IC–OOC keverés szigorúan TILOS. ❌ Illegális akciók közben (maffiaháború, pénzszállító rablás stb.) tilos mentőst hívni. ✅ Minden játékos köteles élethűen RP-zni (félelem, fájdalom, életben maradási ösztön!).</p>
+                    </details>
+                </div>
+            </details>
+
+            <!-- Védett területek & munkák szakasz -->
+            <details class="accordion">
+                <summary>🏛 II. Védett területek & munkák</summary>
+                <div class="accordion-content">
+                    <p>🔹 Védett zónák – itt tilos minden illegális akció, verekedés, fegyverhasználat, járműlopás: 🚓 Legális frakciók bázisai (pl. börtön) 🚘 Minden publikus garázs + 150m körzete 🏢 Főpublik (térképen zöld zóna) 🚔 Lefoglalt járművek helyszíne + 150m körzete 🏛 Munkaügyi központ + 150m körzete 👷‍♂️ Legális/hobbi munkát végző játékosok (pl. kamionos, buszos, kukás stb.) ⚠️ Kivétel: Szerelő, fegyverboltos, éttermes csak akkor védett, ha frakcióautót és frakcióruhát együtt használ! 🛒 Fegyverbolt (és 10m körzete) 🗺️ Térképen nagy blippel jelölt ikonok (+150m) (Bankoknál csak az interior védett, a külső nem!)</p>
+                </div>
+            </details>
+
+            <!-- Hibák jelentése -->
+            <details class="accordion">
+                <summary>🐞 III. Hibák jelentése</summary>
+                <div class="accordion-content">
+                    <p>Ha bármilyen bugot találsz, azonnal jelezned kell. ❌ A hibák kihasználása súlyos büntetéssel (akár örök bannal) jár!</p>
+                </div>
+            </details>
+
+            <!-- Admin szabályok -->
+            <details class="accordion">
+                <summary>👮 IV. Admin szabályok</summary>
+                <div class="accordion-content">
+                    <p>Adminnal kapcsolatba léphetsz: /report paranccsal Discordon keresztül ❗ Admin csak bizonyítékkal (kép/videó) hívható. ⚠️ Felesleges adminügy generálása szankciót von maga után. ⚖️ Ha egy admin döntését felül akarod bírálni, de a felülvizsgálat jogosnak bizonyul, az eredeti büntetésed 50%-kal nőhet.</p>
+                </div>
+            </details>
+
+            <!-- Illegális & Legális Szabályok -->
+            <details class="accordion">
+                <summary>🔫 V. Illegális & Legális Szabályok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>🔴 Illegális tevékenységek alapelvei</summary>
+                        <p>❌ Illegálként kötelező a frakció ruházat viselése minden akcióban. ❌ Rendvédelmi szerveket hergelni, siettetni (pl. dudálással, beszólással, drifteléssel) tilos. ❌ Frakciós autókkal kereskedni nem lehet. ❌ A HQ raid csak nyomós indokkal történhet (pl. elrabolt tag miatt). Egy frakció heti 1x támadhatja meg ugyanazt a frakciót. Raid előtt bizonyítékot kell bemutatni Super Adminnak vagy magasabb rangnak. ❌ Rendőrtől csak lőszert és medkitet lehet elvenni tűzharc közben. Tűzoltót lootolni szigorúan tilos. ❌ Rendvédelmi vagy tűzoltó járművek lootolása minden helyzetben tilos.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🟢 Legális frakciók szabályai</summary>
+                        <p>❌ Legális munkásként nem végezhetsz illegális tevékenységet (pl. rendőrként bérgyilkos munka). ❌ Munka járművek nem használhatók magáncélra. ❌ Szolgálat közben kereskedni tilos (mentős, rendőr). ❌ Rendvédelem / mentők járműveinek optikai tuningja tilos (szín csak leader engedéllyel módosítható). ✅ Mentők és rendőrök kötelesek részletes RP-t adni (pl. mentős 2-3 percig RP-zik a kezelést, rendőr túsztárgyalót jelöl ki). ❗ Rendőr nem lőhet az elkövetőre, amíg túszra tart fegyvert (kivéve ha az elkövető lövést ad le).</p>
+                    </details>
+                </div>
+            </details>
+
+            <!-- Rablási szabályok -->
+            <details class="accordion">
+                <summary>💰 VI. Rablási szabályok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>📌 Általános rablási irányelvek</summary>
+                        <p>✅ Fizetett túsz lehet, de saját frakciótag vagy szövetséges nem! ✅ Védett játékos, ha hergel, elveszti a védettségét. 💵 Rabláskor max. 10.000$ készpénz rabolható, fegyverek & illegális tárgyak korlátlanul. 🔒 Egy személy csak egyszer lootolható egy adott akcióban.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🚨 Rablási menetrend</summary>
+                        <p>⏱ Restart előtt: 30 perccel: részleges illegál stop 10 perccel: teljes illegál stop Restart után 20 perc: részleges stop. 👮 Ha rendőrség „govol”, kötelező megvárni őket. 🔫 Túsztárgyalás közben nem hagyhatod el a helyszínt. 🚔 Rendvédelem max. 2 járművel több egységet hozhat, mint az illegál. 🏍 Minden rablásra max. 1 db motor vihető.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>📊 Járműlimit rablásoknál</summary>
+                        <p>Boltrablás: Illegál 3 jármű – Rendvédelem 5 jármű Kis Bank: Illegál 4 – Rendvédelem 6 Nemzeti Bank: Illegál 5 – Rendvédelem 7 2 óránként rabolható, frakció naponta egyszer! Ékszerbolt: 1 játékos túsz kötelező, max. 4 NPC túsz. Kamion rablás: Illegál 5 – Rendvédelem 7 (a kamion 50 km/h alatt robban!) 📌 Speciális rablásoknál (Humane, BobCat, Yacht) részletes egyedi szabályok érvényesek, ezek minden résztvevő számára kötelezőek.</p>
+                    </details>
+                </div>
+            </details>
+
+            <!-- Frakciók & Jump szabályok -->
+            <details class="accordion">
+                <summary>🏴 VII. Frakciók & Jump szabályok</summary>
+                <div class="accordion-content">
+                    <p>Ha elhagynád a frakciót CK nélkül: Jelezned kell a Leadernek, aki 7 nap „Jumpra” tesz. Nincs név- vagy külsőváltoztatás – vállalnod kell a karaktered múltját. Jump kifizetése tilos, a 7 napot ki kell várnod. Ha kevesebb, mint 1 hetet voltál frakcióban → 1 hét jump. Ha több, mint 1 hetet → 3 nap jump. Frakció Jump ranggal csak más „frakció nélküli” játékosokkal mozoghatsz. Egy játékos csak akkor lehet frakció tagja, ha Discordon is megkapta a megfelelő rangot.</p>
+                </div>
+            </details>
+
+            <!-- Tiltott RP-k & egyéb súlyos szabályok -->
+            <details class="accordion">
+                <summary>☠️ VIII. Tiltott RP-k & egyéb súlyos szabályok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>🚫 Erősen tiltott RP-típusok</summary>
+                        <p>Nemi erőszak Pedofília Kannibalizmus Bestialitás Nekrofília Feldarabolás Szexuális RP (kivéve ha mindkét fél beleegyezik, de forgalmas helyen tilos)</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🪦 Hullagyalázás</summary>
+                        <p>Tilos köpködni, levizelni, sértően beszélni a holttesthez. Tilos „lehajolok az ÖCSKÖSHÖZ” kifejezés használata lootoláskor. Tilos Twitterre vagy máshova képet feltölteni a hulláról.</p>
+                    </details>
+                </div>
+            </details>
+
+            <!-- Alapfogalmak szakasz -->
+            <details class="accordion">
+                <summary>⚠️ Alapfogalmak</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>⚠️ PG – PowerGaming</summary>
+                        <p>👉 Meghatározás: Azoknak a cselekedeteknek az összessége, amelyeket a való életben nem mernél megtenni, vagy amelyek teljesen irreálisak a karaktered képességeihez képest. 📜 Fontos szabályok: 🚗 Autóból autóba nincs PG – járművekkel való akciózás külön szabályokhoz kötött. 🔫 Három ember egy fegyverrel egy autósra fogja a fegyvert → PG-nek számít. 📦 Ha „bedobozolnak” (beszorítanak) → meg kell adnod magad! 🔫 Ha rád fogják a fegyvert, nem veheted elő a sajátodat (ez PG-nek minősül). Kivétel: ha a kezedben van a fegyver, akkor lőhetsz (1v1 helyzetben is van PG).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🎭 MG – MetaGaming</summary>
+                        <p>👉 Meghatározás: Amikor OOC információt IC helyzetben használsz. 📜 Fontos szabály: Mivel a szerveren van rádió és telefon, szigorúan tilos Discordról vagy bármilyen külső platformról szerzett információt IC-ben felhasználni.</p>
+                    </details>
+                    <!-- További fogalmak hasonlóan... -->
+                    <details class="sub-accordion">
+                        <summary>🔄 RK – RevengeKill</summary>
+                        <p>👉 Meghatározás: Halál utáni bosszúállás. 📜 Szabály: Ha egy RP-szituációban meghaltál, nem térhetsz vissza addig, amíg az RP folytatódik.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>💀 DM – DeathMatch</summary>
+                        <p>👉 Meghatározás: Ok nélküli ölés. 📜 Szabály: Nyomós indok nélkül nem ölhetsz meg senkit!</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🚗 DB – DriveBy</summary>
+                        <p>👉 Meghatározás: Járművel történő ölés. 📜 Szabályok: Ha az úton mész, meglátsz egy játékost és elütöd, aminek következtében a karaktere meghal → DB. ❗ Kivétel: Ha téged vagy társadat lövik, megvédheted magad azzal, hogy elgázolod a támadót (max. 2 főt!).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🚙 VDM – Vehicle DeathMatch</summary>
+                        <p>👉 Meghatározás: Amikor indokolatlanul, többször mész át valakin, amíg meg nem hal.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🎭 NonRP</summary>
+                        <p>👉 Meghatározás: Olyan cselekedetek összessége, amelyek nem kapcsolódnak a realitáshoz, és megtörik az RP élményt.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🛑 SK – SpawnKill</summary>
+                        <p>👉 Meghatározás: Spawnoláskor történő azonnali megölés. 📜 Szabály: Ha egy játékos épp ingatlant használ, nem ölheted meg azonnal – pár másodperc mozgásidőt adni kell neki.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🎭 ForceRP</summary>
+                        <p>👉 Meghatározás: Saját RP ráerőltetése más játékosra. 📜 Szabály: Semmilyen helyzetben nem kényszerítheted a saját RP-det másra!</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🏢 HQ – HeadQuarter</summary>
+                        <p>👉 Meghatározás: Frakciók területe, bázisa (a térképen jelölve).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🚨 HQ Raid</summary>
+                        <p>👉 Meghatározás: Amikor a frakció lezárt területére (pl. kerítéssel körbekerített HQ) betörsz vagy belősz.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🎭 IC / OOC Fogalmak</summary>
+                        <p>IC (In Character): A karaktered történetéhez, személyiségéhez kötődő minden dolog. OOC (Out of Character): Amit te, mint játékos teszel, de a karaktered világán kívül esik.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🎭 Szereptévesztés</summary>
+                        <p>👉 Meghatározás: Minden olyan cselekedet, amely nem tükrözi a karaktered személyiségét. 📜 Példa: Rendőrként boltot rabolsz.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🚁 HK – Helikopter Kill</summary>
+                        <p>👉 Meghatározás: Amikor szándékosan a helikopter rotorjával megölsz egy másik játékost.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>📘 További Fogalmak</summary>
+                        <p>Ban: A szerverről való kitiltás (lehet határozott vagy határozatlan időre). Feloldás csak Discordon kérhető. Kick: A szerverről való kirúgás (a játékos utána visszacsatlakozhat). Közmunka: Adminok által kiszabott büntetés, meghatározott mennyiségű közmunkával. Crash: Játékhiba, ami a játék leállásához vezet. IRL (In Real Life): A való élet. Item: Olyan tárgy, ami csak a szerveren használható. RP (RolePlay): Szerepjáték, valósághű viselkedés. TGF (Tagfelvétel): Frakciók tagfelvétele szerveren vagy Discordon. AFK (Away From Keyboard): Amikor a játékos távol van a géptől (de ez nem mentesít az RP alól!). Interior: Épületek belső terei. Exterior: Épületek külső terei. PK (Panaszkönyv): Jelentések, panaszok leadására szolgáló rendszer. BTK (Büntetőkönyv): A szerveren alkalmazott büntetési szabályzat.</p>
+                    </details>
+                </div>
+            </details>
+
+            <!-- CK Szabályzat szakasz -->
+            <details class="accordion">
+                <summary>⚖️ CK Szabályzat – Általános Tudnivalók</summary>
+                <div class="accordion-content">
+                    <p>Három típusa van a CK-nak: 1️⃣ Tényleges CK 2️⃣ Részleges CK 3️⃣ Memória CK 📌 CK-t kizárólag admin jelenlétében lehet végrehajtani! (Kivétel: Memo CK, amihez nem szükséges admin.) 📌 CK csak akkor engedélyezett, ha nyomós oka van! 📌 CK végén az admin dönti el, hogy jogos volt-e a végrehajtás. 📌 Bizonyíték nélkül CK nem kezdhető meg! CK előtt minden bizonyítékot el kell küldeni az adminnak. Elfogadott formátum: kép, videó vagy hangfelvétel.</p>
+                    <details class="sub-accordion">
+                        <summary>📂 Szükséges bizonyítékok CK-hoz</summary>
+                        <p>✅ Minimum 24 órával előre jelezni az erre kijelölt Discord-szobában. ✅ A célpont teljes IC nevét meg kell adni. ✅ Minden indokot részletesen le kell írni, amiért CK-t akarsz indítani.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🧠 Memória CK (MemoCK)</summary>
+                        <p>👥 Csak saját frakciótag lehet célpont, de civil is beleférhet. 🗑️ Teljes memóriavesztés – minden információt elfelejt: frakció HQ, pénzmosó, illegális helyek, minden IC tudás. 🆔 Névváltás nem kötelező. 📅 Minimum 1 hét IC ismeretség szükséges (kivétel: frakciótag CK). 🎭 Minimum 10 percet igénylő RP szükséges. ❗ Admin jelenlét nem kötelező.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>🩹 Részleges CK</summary>
+                        <p>👥 Lehet saját frakcióból, más frakcióból vagy akár civil. 🗑️ Teljes memóriavesztés, ugyanúgy, mint Memo CK esetében. 🆔 Névváltás kötelező! 📅 Minimum 2 hét IC ismeretség szükséges (kivétel: frakciótag CK). 🎭 Minimum 25 perces RP kötelező. 💰 Vagyonvesztés: a játékos elveszíti a vagyona 30%-át (autók, pénz, tárolt tárgyak). (Az általad vásárolt PP-s tárgyak nem vesznek el!) ❗ Admin jelenlét szükséges.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>💀 Tényleges CK</summary>
+                        <p>👥 Célpont lehet más frakció tagja vagy civil. 🗑️ Teljes memóriavesztés + teljes karakter törlés. (Az általad vásárolt PP-s tárgyak itt is megmaradnak!) 📅 Minimum 3 hét IC ismeretség szükséges (kivétel: frakciótag CK). 🎭 Minimum 45 perces RP kell. ❗ Admin jelenlét kötelező.</p>
+                    </details>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

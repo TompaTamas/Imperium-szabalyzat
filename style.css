@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    color: gold;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.discord-btn {
+    display: inline-block;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.search-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid gold;
+    background-color: black;
+    color: gold;
+}
+
+accordion, .sub-accordion {
+    margin-bottom: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+summary {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.accordion-content {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid gold;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(255, 215, 0, 0.1);
+}
