@@ -3,609 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperium Roleplay - Szabályzat</title>
+    <title>Imperium Roleplay Szabályzat</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="logo-container">
-                <img src="marvel.png" alt="Imperium Roleplay Logo" class="logo">
-                <h1 class="title">IMPERIUM ROLEPLAY</h1>
-                <p class="subtitle">Szabályzat</p>
-            </div>
-        </header>
-
-        <!-- Search and Discord Button -->
-        <div class="controls">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="🔍 Keresés a szabályokban...">
-            </div>
-            <a href="https://discord.gg/sRedAXTCa9" target="_blank" class="discord-btn">
-                💬 Discord Csatlakozás
-            </a>
+    <header>
+        <div class="logo-container">
+            <!-- A logo helye: mivel a promptban leÃ­rt PNG alapjÃ¡n, itt egy placeholder SVG-t hasznÃ¡lok az arany logo reprezentÃ¡lÃ¡sÃ¡ra fekete hÃ¡ttÃ©ren. ValÃ³di kÃ©pet base64-ben vagy fÃ¡jlkÃ©nt lehetne hozzÃ¡adni. -->
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <rect width="200" height="200" fill="black"/>
+                <text x="50" y="100" font-size="40" fill="gold" font-weight="bold">IMPERIUM</text>
+                <text x="50" y="140" font-size="30" fill="gold">ROLEPLAY</text>
+                <!-- Laurel and crown placeholder -->
+                <path d="M80 50 L100 70 L120 50" stroke="gold" fill="none"/>
+                <path d="M80 50 L60 70 L40 50" stroke="gold" fill="none"/>
+                <circle cx="100" cy="150" r="10" fill="gold"/>
+            </svg>
         </div>
+        <h1>Imperium Roleplay SzabÃ¡lyzat</h1>
+        <a href="https://discord.gg/sRedAXTCa9" class="discord-btn">Csatlakozz a Discordhoz</a>
+    </header>
 
-        <!-- Rules Content -->
-        <div class="rules-container">
-            <!-- I. Általános Szabályok -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('general')">
-                    <h2>📜 I. Általános Szabályok</h2>
-                    <span class="toggle-icon">+</span>
+    <section class="search-section">
+        <input type="text" id="searchInput" placeholder="KeresÃ©s a szabÃ¡lyzatban..." onkeyup="searchRules()">
+    </section>
+
+    <main>
+        <section id="rules">
+            <!-- ÃltalÃ¡nos SzabÃ¡lyok szakasz -->
+            <details class="accordion">
+                <summary>I. ÃltalÃ¡nos SzabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ A szabÃ¡lyzat elfogadÃ¡sa</summary>
+                        <p>A szerverhez valÃ³ csatlakozÃ¡ssal automatikusan elfogadod a szabÃ¡lyzat minden pontjÃ¡t. Az â€žÃ©n nem tudtamâ€ nem mentsÃ©g â€“ a szabÃ¡lyok nem ismerete nem mentesÃ­t a kÃ¶vetkezmÃ©nyek alÃ³l. A vezetÅ‘sÃ©g bÃ¡rmikor mÃ³dosÃ­thatja a szabÃ¡lyzatot, Ã©s kÃ¼lÃ¶nleges helyzetekben egyedi dÃ¶ntÃ©st hozhat.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ SzerepjÃ¡tÃ©k alapszabÃ¡lyok</summary>
+                        <p>âŒ Nem lÃ©phetsz ki folyamatban lÃ©vÅ‘ RP-szituÃ¡ciÃ³bÃ³l, Ã©s nem tagadhatsz meg RP-t, mert azzal akadÃ¡lyoznÃ¡d mÃ¡sok jÃ¡tÃ©kÃ¡t. âŒ Alap (kopter) skint hasznÃ¡lni tilos â€“ regisztrÃ¡ciÃ³ utÃ¡n kÃ¶telezÅ‘ a sajÃ¡t karakteredre szabott skint hordanod. âŒ BokorbÃ³l lÃ¶vÃ©s csak akkor megengedett, ha a karaktered lÃ¡thatÃ³ a lÃ¶vÃ©s kÃ¶zben. âŒ Az alÃ¡bbi szabÃ¡lyszegÃ©sek TILOSAK: PG, MG, RK, DM, DM generÃ¡lÃ¡s, NRK, DB, VDM, NonRP, SK, ForceRP. âŒ Vagyon szÃ©tosztÃ¡s indokolatlanul tilos.</p>
+                    </details>
+                    <!-- TovÃ¡bbi alpontok hasonlÃ³an... (teljes tartalom a TXT-bÅ‘l) -->
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ JÃ¡rmÅ±hasznÃ¡lat â€“ Gumik korlÃ¡tozÃ¡sa</summary>
+                        <p>2 kerÃ©knÃ©l tÃ¶bb defektes gumival nem vezethetsz! ðŸš™ 10 kerekÅ±: max. 5 kerÃ©k hiÃ¡nyozhat ðŸš› 6 kerekÅ±: max. 3 kerÃ©k hiÃ¡nyozhat ðŸï¸ 2 kerekÅ±: max. 1 kerÃ©k hiÃ¡nyozhat</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ Tiltott RP-helyzetek</summary>
+                        <p>âŒ Ã–ngyilkos RP szigorÃºan tilos (kivÃ©ve CK esetÃ©n). Ide tartozik: AutÃ³val szÃ¡ndÃ©kosan vÃ­zbe ugratÃ¡s Direkt frontÃ¡lis karambol KormÃ¡ny hirtelen mÃ¡s elÃ© rÃ¡ntÃ¡sa / szembesÃ¡vban kÃ¶zlekedÃ©s Magas helyrÅ‘l valÃ³ leugrÃ¡s</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ VÃ­zben tartÃ³zkodÃ¡s</summary>
+                        <p>ðŸŒŠ BÃºvÃ¡rruha nÃ©lkÃ¼l: HavazÃ¡skor max. 5 perc NormÃ¡l idÅ‘ben max. 10 perc ðŸŒŠ BÃºvÃ¡rruhÃ¡val: max. 20 perc</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ OOC (Out of Character) szabÃ¡lyok</summary>
+                        <p>âŒ OOC beszÃ©lgetÃ©s tilos a szerveren (kivÃ©ve admin jelenlÃ©tÃ©ben, â€žTAGâ€ jelÃ¶lÃ©ssel). âŒ OOC hazugsÃ¡g â€“ komoly kÃ¶vetkezmÃ©nyekkel jÃ¡rhat, akÃ¡r kitiltÃ¡ssal. âŒ OOC kereskedelem minden formÃ¡ban TILOS. âŒ MÃ¡s szerver hirdetÃ©se = instant ban. âŒ Airsoft Ã©s FFA pÃ¡lyÃ¡rÃ³l tilos tÃ¡rgyat (fegyver, lÅ‘szer) kivinni â€“ ez is azonnali bant von maga utÃ¡n.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ Technikai tiltÃ¡sok</summary>
+                        <p>Tilos minden olyan mod, texture pack vagy program, ami elÅ‘nyt ad: NO PROP | NO NIGHT | NO WEATHER | NO FOG | BLOODFX | KILLFX | TRACER | CROSSHAIR | ANTI AFK | AUTOCLICKER | MINIMAP MOD | FEGYVER SKIN | FOV CHANGER | DMG INDICATOR âŒ A GTA hibÃ¡inak kihasznÃ¡lÃ¡sa TILOS! pl.: F gombbal kiÃ¼tÃ©s a jÃ¡rmÅ±bÅ‘l, â€žglitch rollâ€, â€žspeed boostâ€, szÃ¡ndÃ©kos Ã¶sszeesÃ©s. âŒ AnimÃ¡ciÃ³k bugolÃ¡sa sem megengedett (pl. falon Ã¡tbÃºjÃ¡s, tÅ±zharcban animÃ¡ciÃ³ kihasznÃ¡lÃ¡sa).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ”¹ EgyÃ©b tilalmak</summary>
+                        <p>âŒ KÃ³rhÃ¡zi ellÃ¡tÃ¡s utÃ¡n nem mehetsz vissza a lÃ¶vÃ¶ldÃ¶zÃ©s helyszÃ­nÃ©re. âŒ Nem fenyegetheted az admint. âŒ Account megosztÃ¡sa TILOS â€“ ha mÃ©gis megosztod, vÃ¡llalod a kÃ¶vetkezmÃ©nyeket. âŒ ICâ€“OOC keverÃ©s szigorÃºan TILOS. âŒ IllegÃ¡lis akciÃ³k kÃ¶zben (maffiahÃ¡borÃº, pÃ©nzszÃ¡llÃ­tÃ³ rablÃ¡s stb.) tilos mentÅ‘st hÃ­vni. âœ… Minden jÃ¡tÃ©kos kÃ¶teles Ã©lethÅ±en RP-zni (fÃ©lelem, fÃ¡jdalom, Ã©letben maradÃ¡si Ã¶sztÃ¶n!).</p>
+                    </details>
                 </div>
-                <div class="rule-content" id="general">
-                    <div class="subsection">
-                        <h3>🔹 A szabályzat elfogadása</h3>
-                        <ul>
-                            <li>A szerverhez való csatlakozással automatikusan elfogadod a szabályzat minden pontját.</li>
-                            <li>Az „én nem tudtam" nem mentség – a szabályok nem ismerete nem mentesít a következmények alól.</li>
-                            <li>A vezetőség bármikor módosíthatja a szabályzatot, és különleges helyzetekben egyedi döntést hozhat.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="subsection">
-                        <h3>🔹 Szerepjáték alapszabályok</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Nem léphetsz ki folyamatban lévő RP-szituációból, és nem tagadhatsz meg RP-t.</li>
-                            <li>❌ Alap (kopter) skint használni tilos – kötelező a saját karakteredre szabott skint hordanod.</li>
-                            <li>❌ Bokorból lövés csak akkor megengedett, ha a karaktered látható a lövés közben.</li>
-                            <li>❌ A következő szabályszegések TILOSAK: PG, MG, RK, DM, DM generálás, NRK, DB, VDM, NonRP, SK, ForceRP.</li>
-                            <li>❌ Vagyon szétosztás indokolatlanul tilos.</li>
-                        </ul>
-                    </div>
+            </details>
 
-                    <div class="subsection">
-                        <h3>🔹 Járműhasználat – Gumik korlátozása</h3>
-                        <p><strong>2 keréknél több defektes gumival nem vezethetsz!</strong></p>
-                        <ul>
-                            <li>🚙 10 kerekű: max. 5 kerék hiányozhat</li>
-                            <li>🚛 6 kerekű: max. 3 kerék hiányozhat</li>
-                            <li>🏍️ 2 kerekű: max. 1 kerék hiányozhat</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🔹 Tiltott RP-helyzetek</h3>
-                        <p><strong>❌ Öngyilkos RP szigorúan tilos (kivéve CK esetén). Ide tartozik:</strong></p>
-                        <ul class="forbidden-list">
-                            <li>Autóval szándékosan vízbe ugratás</li>
-                            <li>Direkt frontális karambol</li>
-                            <li>Kormány hirtelen más elé rántása / szembesávban közlekedés</li>
-                            <li>Magas helyről való leugrás</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🔹 Vízben tartózkodás</h3>
-                        <ul>
-                            <li>🌊 <strong>Búvárruha nélkül:</strong> Havazáskor max. 5 perc, Normál időben max. 10 perc</li>
-                            <li>🌊 <strong>Búvárruhával:</strong> max. 20 perc</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🔹 OOC (Out of Character) szabályok</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ OOC beszélgetés tilos a szerveren (kivéve admin jelenlétében, „TAG" jelöléssel).</li>
-                            <li>❌ OOC hazugság – komoly következményekkel járhat, akár kitiltással.</li>
-                            <li>❌ OOC kereskedelem minden formában TILOS.</li>
-                            <li>❌ Más szerver hirdetése = instant ban.</li>
-                            <li>❌ Airsoft és FFA pályáról tilos tárgyat kivinni – ez is azonnali bant von maga után.</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🔹 Technikai tiltások</h3>
-                        <p><strong>Tilos minden olyan mod, texture pack vagy program, ami előnyt ad:</strong></p>
-                        <div class="tech-banned">
-                            NO PROP | NO NIGHT | NO WEATHER | NO FOG | BLOODFX | KILLFX | TRACER | CROSSHAIR | ANTI AFK | AUTOCLICKER | MINIMAP MOD | FEGYVER SKIN | FOV CHANGER | DMG INDICATOR
-                        </div>
-                        <ul class="forbidden-list">
-                            <li>❌ A GTA hibáinak kihasználása TILOS! (pl.: F gombbal kiütés, „glitch roll", „speed boost")</li>
-                            <li>❌ Animációk bugolása sem megengedett (pl. falon átbújás, tűzharcban animáció kihasználása).</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🔹 Egyéb tilalmak</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Kórházi ellátás után nem mehetsz vissza a lövöldözés helyszínére.</li>
-                            <li>❌ Nem fenyegetheted az admint.</li>
-                            <li>❌ Account megosztása TILOS.</li>
-                            <li>❌ IC–OOC keverés szigorúan TILOS.</li>
-                            <li>❌ Illegális akciók közben tilos mentőst hívni.</li>
-                        </ul>
-                        <p class="allowed">✅ Minden játékos köteles élethűen RP-zni (félelem, fájdalom, életben maradási ösztön!).</p>
-                    </div>
+            <!-- VÃ©dett terÃ¼letek & munkÃ¡k szakasz -->
+            <details class="accordion">
+                <summary>ðŸ› II. VÃ©dett terÃ¼letek & munkÃ¡k</summary>
+                <div class="accordion-content">
+                    <p>ðŸ”¹ VÃ©dett zÃ³nÃ¡k â€“ itt tilos minden illegÃ¡lis akciÃ³, verekedÃ©s, fegyverhasznÃ¡lat, jÃ¡rmÅ±lopÃ¡s: ðŸš“ LegÃ¡lis frakciÃ³k bÃ¡zisai (pl. bÃ¶rtÃ¶n) ðŸš˜ Minden publikus garÃ¡zs + 150m kÃ¶rzete ðŸ¢ FÅ‘publik (tÃ©rkÃ©pen zÃ¶ld zÃ³na) ðŸš” Lefoglalt jÃ¡rmÅ±vek helyszÃ­ne + 150m kÃ¶rzete ðŸ› MunkaÃ¼gyi kÃ¶zpont + 150m kÃ¶rzete ðŸ‘·â€â™‚ï¸ LegÃ¡lis/hobbi munkÃ¡t vÃ©gzÅ‘ jÃ¡tÃ©kosok (pl. kamionos, buszos, kukÃ¡s stb.) âš ï¸ KivÃ©tel: SzerelÅ‘, fegyverboltos, Ã©ttermes csak akkor vÃ©dett, ha frakciÃ³autÃ³t Ã©s frakciÃ³ruhÃ¡t egyÃ¼tt hasznÃ¡l! ðŸ›’ Fegyverbolt (Ã©s 10m kÃ¶rzete) ðŸ—ºï¸ TÃ©rkÃ©pen nagy blippel jelÃ¶lt ikonok (+150m) (BankoknÃ¡l csak az interior vÃ©dett, a kÃ¼lsÅ‘ nem!)</p>
                 </div>
-            </div>
+            </details>
 
-            <!-- II. Védett területek & munkák -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('protected')">
-                    <h2>🏛 II. Védett területek & munkák</h2>
-                    <span class="toggle-icon">+</span>
+            <!-- HibÃ¡k jelentÃ©se -->
+            <details class="accordion">
+                <summary>ðŸž III. HibÃ¡k jelentÃ©se</summary>
+                <div class="accordion-content">
+                    <p>Ha bÃ¡rmilyen bugot talÃ¡lsz, azonnal jelezned kell. âŒ A hibÃ¡k kihasznÃ¡lÃ¡sa sÃºlyos bÃ¼ntetÃ©ssel (akÃ¡r Ã¶rÃ¶k bannal) jÃ¡r!</p>
                 </div>
-                <div class="rule-content" id="protected">
-                    <div class="subsection">
-                        <h3>🔹 Védett zónák</h3>
-                        <p><strong>Itt tilos minden illegális akció, verekedés, fegyverhasználat, járműlopás:</strong></p>
-                        <ul>
-                            <li>🚓 Legális frakciók bázisai (pl. börtön)</li>
-                            <li>🚘 Minden publikus garázs + 150m körzete</li>
-                            <li>🏢 Főpublik (térképen zöld zóna)</li>
-                            <li>🚔 Lefoglalt járművek helyszíne + 150m körzete</li>
-                            <li>🏛 Munkaügyi központ + 150m körzete</li>
-                            <li>👷‍♂️ Legális/hobbi munkát végző játékosok (pl. kamionos, buszos, kukás)</li>
-                            <li>🛒 Fegyverbolt (és 10m körzete)</li>
-                            <li>🗺️ Térképen nagy blippel jelölt ikonok (+150m)</li>
-                        </ul>
-                        <div class="warning">
-                            ⚠️ <strong>Kivétel:</strong> Szerelő, fegyverboltos, éttermes csak akkor védett, ha frakcióautót és frakcióruhát együtt használ!<br>
-                            <strong>Megjegyzés:</strong> Bankoknál csak az interior védett, a külső nem!
-                        </div>
-                    </div>
+            </details>
+
+            <!-- Admin szabÃ¡lyok -->
+            <details class="accordion">
+                <summary>ðŸ‘® IV. Admin szabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <p>Adminnal kapcsolatba lÃ©phetsz: /report paranccsal Discordon keresztÃ¼l â— Admin csak bizonyÃ­tÃ©kkal (kÃ©p/videÃ³) hÃ­vhatÃ³. âš ï¸ Felesleges adminÃ¼gy generÃ¡lÃ¡sa szankciÃ³t von maga utÃ¡n. âš–ï¸ Ha egy admin dÃ¶ntÃ©sÃ©t felÃ¼l akarod bÃ­rÃ¡lni, de a felÃ¼lvizsgÃ¡lat jogosnak bizonyul, az eredeti bÃ¼ntetÃ©sed 50%-kal nÅ‘het.</p>
                 </div>
-            </div>
+            </details>
 
-            <!-- III. Hibák jelentése -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('bugs')">
-                    <h2>🐞 III. Hibák jelentése</h2>
-                    <span class="toggle-icon">+</span>
+            <!-- IllegÃ¡lis & LegÃ¡lis SzabÃ¡lyok -->
+            <details class="accordion">
+                <summary>ðŸ”« V. IllegÃ¡lis & LegÃ¡lis SzabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>ðŸ”´ IllegÃ¡lis tevÃ©kenysÃ©gek alapelvei</summary>
+                        <p>âŒ IllegÃ¡lkÃ©nt kÃ¶telezÅ‘ a frakciÃ³ ruhÃ¡zat viselÃ©se minden akciÃ³ban. âŒ RendvÃ©delmi szerveket hergelni, siettetni (pl. dudÃ¡lÃ¡ssal, beszÃ³lÃ¡ssal, driftelÃ©ssel) tilos. âŒ FrakciÃ³s autÃ³kkal kereskedni nem lehet. âŒ A HQ raid csak nyomÃ³s indokkal tÃ¶rtÃ©nhet (pl. elrabolt tag miatt). Egy frakciÃ³ heti 1x tÃ¡madhatja meg ugyanazt a frakciÃ³t. Raid elÅ‘tt bizonyÃ­tÃ©kot kell bemutatni Super Adminnak vagy magasabb rangnak. âŒ RendÅ‘rtÅ‘l csak lÅ‘szert Ã©s medkitet lehet elvenni tÅ±zharc kÃ¶zben. TÅ±zoltÃ³t lootolni szigorÃºan tilos. âŒ RendvÃ©delmi vagy tÅ±zoltÃ³ jÃ¡rmÅ±vek lootolÃ¡sa minden helyzetben tilos.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŸ¢ LegÃ¡lis frakciÃ³k szabÃ¡lyai</summary>
+                        <p>âŒ LegÃ¡lis munkÃ¡skÃ©nt nem vÃ©gezhetsz illegÃ¡lis tevÃ©kenysÃ©get (pl. rendÅ‘rkÃ©nt bÃ©rgyilkos munka). âŒ Munka jÃ¡rmÅ±vek nem hasznÃ¡lhatÃ³k magÃ¡ncÃ©lra. âŒ SzolgÃ¡lat kÃ¶zben kereskedni tilos (mentÅ‘s, rendÅ‘r). âŒ RendvÃ©delem / mentÅ‘k jÃ¡rmÅ±veinek optikai tuningja tilos (szÃ­n csak leader engedÃ©llyel mÃ³dosÃ­thatÃ³). âœ… MentÅ‘k Ã©s rendÅ‘rÃ¶k kÃ¶telesek rÃ©szletes RP-t adni (pl. mentÅ‘s 2-3 percig RP-zik a kezelÃ©st, rendÅ‘r tÃºsztÃ¡rgyalÃ³t jelÃ¶l ki). â— RendÅ‘r nem lÅ‘het az elkÃ¶vetÅ‘re, amÃ­g tÃºszra tart fegyvert (kivÃ©ve ha az elkÃ¶vetÅ‘ lÃ¶vÃ©st ad le).</p>
+                    </details>
                 </div>
-                <div class="rule-content" id="bugs">
-                    <div class="subsection">
-                        <p>Ha bármilyen bugot találsz, azonnal jelezned kell.</p>
-                        <p class="forbidden">❌ A hibák kihasználása súlyos büntetéssel (akár örök bannal) jár!</p>
-                    </div>
+            </details>
+
+            <!-- RablÃ¡si szabÃ¡lyok -->
+            <details class="accordion">
+                <summary>ðŸ’° VI. RablÃ¡si szabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>ðŸ“Œ ÃltalÃ¡nos rablÃ¡si irÃ¡nyelvek</summary>
+                        <p>âœ… Fizetett tÃºsz lehet, de sajÃ¡t frakciÃ³tag vagy szÃ¶vetsÃ©ges nem! âœ… VÃ©dett jÃ¡tÃ©kos, ha hergel, elveszti a vÃ©dettsÃ©gÃ©t. ðŸ’µ RablÃ¡skor max. 10.000$ kÃ©szpÃ©nz rabolhatÃ³, fegyverek & illegÃ¡lis tÃ¡rgyak korlÃ¡tlanul. ðŸ”’ Egy szemÃ©ly csak egyszer lootolhatÃ³ egy adott akciÃ³ban.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸš¨ RablÃ¡si menetrend</summary>
+                        <p>â± Restart elÅ‘tt: 30 perccel: rÃ©szleges illegÃ¡l stop 10 perccel: teljes illegÃ¡l stop Restart utÃ¡n 20 perc: rÃ©szleges stop. ðŸ‘® Ha rendÅ‘rsÃ©g â€žgovolâ€, kÃ¶telezÅ‘ megvÃ¡rni Å‘ket. ðŸ”« TÃºsztÃ¡rgyalÃ¡s kÃ¶zben nem hagyhatod el a helyszÃ­nt. ðŸš” RendvÃ©delem max. 2 jÃ¡rmÅ±vel tÃ¶bb egysÃ©get hozhat, mint az illegÃ¡l. ðŸ Minden rablÃ¡sra max. 1 db motor vihetÅ‘.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ“Š JÃ¡rmÅ±limit rablÃ¡soknÃ¡l</summary>
+                        <p>BoltrablÃ¡s: IllegÃ¡l 3 jÃ¡rmÅ± â€“ RendvÃ©delem 5 jÃ¡rmÅ± Kis Bank: IllegÃ¡l 4 â€“ RendvÃ©delem 6 Nemzeti Bank: IllegÃ¡l 5 â€“ RendvÃ©delem 7 2 Ã³rÃ¡nkÃ©nt rabolhatÃ³, frakciÃ³ naponta egyszer! Ã‰kszerbolt: 1 jÃ¡tÃ©kos tÃºsz kÃ¶telezÅ‘, max. 4 NPC tÃºsz. Kamion rablÃ¡s: IllegÃ¡l 5 â€“ RendvÃ©delem 7 (a kamion 50 km/h alatt robban!) ðŸ“Œ SpeciÃ¡lis rablÃ¡soknÃ¡l (Humane, BobCat, Yacht) rÃ©szletes egyedi szabÃ¡lyok Ã©rvÃ©nyesek, ezek minden rÃ©sztvevÅ‘ szÃ¡mÃ¡ra kÃ¶telezÅ‘ek.</p>
+                    </details>
                 </div>
-            </div>
+            </details>
 
-            <!-- IV. Admin szabályok -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('admin')">
-                    <h2>👮 IV. Admin szabályok</h2>
-                    <span class="toggle-icon">+</span>
+            <!-- FrakciÃ³k & Jump szabÃ¡lyok -->
+            <details class="accordion">
+                <summary>ðŸ´ VII. FrakciÃ³k & Jump szabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <p>Ha elhagynÃ¡d a frakciÃ³t CK nÃ©lkÃ¼l: Jelezned kell a Leadernek, aki 7 nap â€žJumpraâ€ tesz. Nincs nÃ©v- vagy kÃ¼lsÅ‘vÃ¡ltoztatÃ¡s â€“ vÃ¡llalnod kell a karaktered mÃºltjÃ¡t. Jump kifizetÃ©se tilos, a 7 napot ki kell vÃ¡rnod. Ha kevesebb, mint 1 hetet voltÃ¡l frakciÃ³ban â†’ 1 hÃ©t jump. Ha tÃ¶bb, mint 1 hetet â†’ 3 nap jump. FrakciÃ³ Jump ranggal csak mÃ¡s â€žfrakciÃ³ nÃ©lkÃ¼liâ€ jÃ¡tÃ©kosokkal mozoghatsz. Egy jÃ¡tÃ©kos csak akkor lehet frakciÃ³ tagja, ha Discordon is megkapta a megfelelÅ‘ rangot.</p>
                 </div>
-                <div class="rule-content" id="admin">
-                    <div class="subsection">
-                        <p><strong>Adminnal kapcsolatba léphetsz:</strong></p>
-                        <ul>
-                            <li>/report paranccsal</li>
-                            <li>Discordon keresztül</li>
-                        </ul>
-                        <div class="warning">
-                            <p>❗ Admin csak bizonyítékkal (kép/videó) hívható.</p>
-                            <p>⚠️ Felesleges adminügy generálása szankciót von maga után.</p>
-                            <p>⚖️ Ha egy admin döntését felül akarod bírálni, de a felülvizsgálat jogosnak bizonyul, az eredeti büntetésed 50%-kal nőhet.</p>
-                        </div>
-                    </div>
+            </details>
+
+            <!-- Tiltott RP-k & egyÃ©b sÃºlyos szabÃ¡lyok -->
+            <details class="accordion">
+                <summary>â˜ ï¸ VIII. Tiltott RP-k & egyÃ©b sÃºlyos szabÃ¡lyok</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>ðŸš« ErÅ‘sen tiltott RP-tÃ­pusok</summary>
+                        <p>Nemi erÅ‘szak PedofÃ­lia Kannibalizmus BestialitÃ¡s NekrofÃ­lia FeldarabolÃ¡s SzexuÃ¡lis RP (kivÃ©ve ha mindkÃ©t fÃ©l beleegyezik, de forgalmas helyen tilos)</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸª¦ HullagyalÃ¡zÃ¡s</summary>
+                        <p>Tilos kÃ¶pkÃ¶dni, levizelni, sÃ©rtÅ‘en beszÃ©lni a holttesthez. Tilos â€žlehajolok az Ã–CSKÃ–SHÃ–Zâ€ kifejezÃ©s hasznÃ¡lata lootolÃ¡skor. Tilos Twitterre vagy mÃ¡shova kÃ©pet feltÃ¶lteni a hullÃ¡rÃ³l.</p>
+                    </details>
                 </div>
-            </div>
+            </details>
 
-            <!-- V. Illegális & Legális Szabályok -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('illegal')">
-                    <h2>🔫 V. Illegális & Legális Szabályok</h2>
-                    <span class="toggle-icon">+</span>
+            <!-- Alapfogalmak szakasz -->
+            <details class="accordion">
+                <summary>âš ï¸ Alapfogalmak</summary>
+                <div class="accordion-content">
+                    <details class="sub-accordion">
+                        <summary>âš ï¸ PG â€“ PowerGaming</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Azoknak a cselekedeteknek az Ã¶sszessÃ©ge, amelyeket a valÃ³ Ã©letben nem mernÃ©l megtenni, vagy amelyek teljesen irreÃ¡lisak a karaktered kÃ©pessÃ©geihez kÃ©pest. ðŸ“œ Fontos szabÃ¡lyok: ðŸš— AutÃ³bÃ³l autÃ³ba nincs PG â€“ jÃ¡rmÅ±vekkel valÃ³ akciÃ³zÃ¡s kÃ¼lÃ¶n szabÃ¡lyokhoz kÃ¶tÃ¶tt. ðŸ”« HÃ¡rom ember egy fegyverrel egy autÃ³sra fogja a fegyvert â†’ PG-nek szÃ¡mÃ­t. ðŸ“¦ Ha â€žbedobozolnakâ€ (beszorÃ­tanak) â†’ meg kell adnod magad! ðŸ”« Ha rÃ¡d fogjÃ¡k a fegyvert, nem veheted elÅ‘ a sajÃ¡todat (ez PG-nek minÅ‘sÃ¼l). KivÃ©tel: ha a kezedben van a fegyver, akkor lÅ‘hetsz (1v1 helyzetben is van PG).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŽ­ MG â€“ MetaGaming</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Amikor OOC informÃ¡ciÃ³t IC helyzetben hasznÃ¡lsz. ðŸ“œ Fontos szabÃ¡ly: Mivel a szerveren van rÃ¡diÃ³ Ã©s telefon, szigorÃºan tilos DiscordrÃ³l vagy bÃ¡rmilyen kÃ¼lsÅ‘ platformrÃ³l szerzett informÃ¡ciÃ³t IC-ben felhasznÃ¡lni.</p>
+                    </details>
+                    <!-- TovÃ¡bbi fogalmak hasonlÃ³an... -->
+                    <details class="sub-accordion">
+                        <summary>ðŸ”„ RK â€“ RevengeKill</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: HalÃ¡l utÃ¡ni bosszÃºÃ¡llÃ¡s. ðŸ“œ SzabÃ¡ly: Ha egy RP-szituÃ¡ciÃ³ban meghaltÃ¡l, nem tÃ©rhetsz vissza addig, amÃ­g az RP folytatÃ³dik.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ’€ DM â€“ DeathMatch</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Ok nÃ©lkÃ¼li Ã¶lÃ©s. ðŸ“œ SzabÃ¡ly: NyomÃ³s indok nÃ©lkÃ¼l nem Ã¶lhetsz meg senkit!</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸš— DB â€“ DriveBy</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: JÃ¡rmÅ±vel tÃ¶rtÃ©nÅ‘ Ã¶lÃ©s. ðŸ“œ SzabÃ¡lyok: Ha az Ãºton mÃ©sz, meglÃ¡tsz egy jÃ¡tÃ©kost Ã©s elÃ¼tÃ¶d, aminek kÃ¶vetkeztÃ©ben a karaktere meghal â†’ DB. â— KivÃ©tel: Ha tÃ©ged vagy tÃ¡rsadat lÃ¶vik, megvÃ©dheted magad azzal, hogy elgÃ¡zolod a tÃ¡madÃ³t (max. 2 fÅ‘t!).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸš™ VDM â€“ Vehicle DeathMatch</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Amikor indokolatlanul, tÃ¶bbszÃ¶r mÃ©sz Ã¡t valakin, amÃ­g meg nem hal.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŽ­ NonRP</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Olyan cselekedetek Ã¶sszessÃ©ge, amelyek nem kapcsolÃ³dnak a realitÃ¡shoz, Ã©s megtÃ¶rik az RP Ã©lmÃ©nyt.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ›‘ SK â€“ SpawnKill</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: SpawnolÃ¡skor tÃ¶rtÃ©nÅ‘ azonnali megÃ¶lÃ©s. ðŸ“œ SzabÃ¡ly: Ha egy jÃ¡tÃ©kos Ã©pp ingatlant hasznÃ¡l, nem Ã¶lheted meg azonnal â€“ pÃ¡r mÃ¡sodperc mozgÃ¡sidÅ‘t adni kell neki.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŽ­ ForceRP</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: SajÃ¡t RP rÃ¡erÅ‘ltetÃ©se mÃ¡s jÃ¡tÃ©kosra. ðŸ“œ SzabÃ¡ly: Semmilyen helyzetben nem kÃ©nyszerÃ­theted a sajÃ¡t RP-det mÃ¡sra!</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ¢ HQ â€“ HeadQuarter</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: FrakciÃ³k terÃ¼lete, bÃ¡zisa (a tÃ©rkÃ©pen jelÃ¶lve).</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸš¨ HQ Raid</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Amikor a frakciÃ³ lezÃ¡rt terÃ¼letÃ©re (pl. kerÃ­tÃ©ssel kÃ¶rbekerÃ­tett HQ) betÃ¶rsz vagy belÅ‘sz.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŽ­ IC / OOC Fogalmak</summary>
+                        <p>IC (In Character): A karaktered tÃ¶rtÃ©netÃ©hez, szemÃ©lyisÃ©gÃ©hez kÃ¶tÅ‘dÅ‘ minden dolog. OOC (Out of Character): Amit te, mint jÃ¡tÃ©kos teszel, de a karaktered vilÃ¡gÃ¡n kÃ­vÃ¼l esik.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸŽ­ SzereptÃ©vesztÃ©s</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Minden olyan cselekedet, amely nem tÃ¼krÃ¶zi a karaktered szemÃ©lyisÃ©gÃ©t. ðŸ“œ PÃ©lda: RendÅ‘rkÃ©nt boltot rabolsz.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸš HK â€“ Helikopter Kill</summary>
+                        <p>ðŸ‘‰ MeghatÃ¡rozÃ¡s: Amikor szÃ¡ndÃ©kosan a helikopter rotorjÃ¡val megÃ¶lsz egy mÃ¡sik jÃ¡tÃ©kost.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ“˜ TovÃ¡bbi Fogalmak</summary>
+                        <p>Ban: A szerverrÅ‘l valÃ³ kitiltÃ¡s (lehet hatÃ¡rozott vagy hatÃ¡rozatlan idÅ‘re). FeloldÃ¡s csak Discordon kÃ©rhetÅ‘. Kick: A szerverrÅ‘l valÃ³ kirÃºgÃ¡s (a jÃ¡tÃ©kos utÃ¡na visszacsatlakozhat). KÃ¶zmunka: Adminok Ã¡ltal kiszabott bÃ¼ntetÃ©s, meghatÃ¡rozott mennyisÃ©gÅ± kÃ¶zmunkÃ¡val. Crash: JÃ¡tÃ©khiba, ami a jÃ¡tÃ©k leÃ¡llÃ¡sÃ¡hoz vezet. IRL (In Real Life): A valÃ³ Ã©let. Item: Olyan tÃ¡rgy, ami csak a szerveren hasznÃ¡lhatÃ³. RP (RolePlay): SzerepjÃ¡tÃ©k, valÃ³sÃ¡ghÅ± viselkedÃ©s. TGF (TagfelvÃ©tel): FrakciÃ³k tagfelvÃ©tele szerveren vagy Discordon. AFK (Away From Keyboard): Amikor a jÃ¡tÃ©kos tÃ¡vol van a gÃ©ptÅ‘l (de ez nem mentesÃ­t az RP alÃ³l!). Interior: Ã‰pÃ¼letek belsÅ‘ terei. Exterior: Ã‰pÃ¼letek kÃ¼lsÅ‘ terei. PK (PanaszkÃ¶nyv): JelentÃ©sek, panaszok leadÃ¡sÃ¡ra szolgÃ¡lÃ³ rendszer. BTK (BÃ¼ntetÅ‘kÃ¶nyv): A szerveren alkalmazott bÃ¼ntetÃ©si szabÃ¡lyzat.</p>
+                    </details>
                 </div>
-                <div class="rule-content" id="illegal">
-                    <div class="subsection">
-                        <h3>🔴 Illegális tevékenységek alapelvei</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Illegálként kötelező a frakció ruházat viselése minden akcióban.</li>
-                            <li>❌ Rendvédelmi szerveket hergelni, siettetni tilos.</li>
-                            <li>❌ Frakciós autókkal kereskedni nem lehet.</li>
-                            <li>❌ A HQ raid csak nyomós indokkal történhet. Egy frakció heti 1x támadhatja meg ugyanazt a frakciót.</li>
-                            <li>❌ Rendőrtől csak lőszert és medkitet lehet elvenni tűzharc közben. Tűzoltót lootolni tilos.</li>
-                            <li>❌ Rendvédelmi vagy tűzoltó járművek lootolása minden helyzetben tilos.</li>
-                        </ul>
-                    </div>
+            </details>
 
-                    <div class="subsection">
-                        <h3>🟢 Legális frakciók szabályai</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Legális munkásként nem végezhetsz illegális tevékenységet.</li>
-                            <li>❌ Munka járművek nem használhatók magáncélra.</li>
-                            <li>❌ Szolgálat közben kereskedni tilos.</li>
-                            <li>❌ Rendvédelem / mentők járműveinek optikai tuningja tilos.</li>
-                        </ul>
-                        <ul class="allowed-list">
-                            <li>✅ Mentők és rendőrök kötelesek részletes RP-t adni.</li>
-                        </ul>
-                        <div class="warning">
-                            ❗ Rendőr nem lőhet az elkövetőre, amíg túszra tart fegyvert (kivéve ha az elkövető lövést ad le).
-                        </div>
-                    </div>
+            <!-- CK SzabÃ¡lyzat szakasz -->
+            <details class="accordion">
+                <summary>âš–ï¸ CK SzabÃ¡lyzat â€“ ÃltalÃ¡nos TudnivalÃ³k</summary>
+                <div class="accordion-content">
+                    <p>HÃ¡rom tÃ­pusa van a CK-nak: 1ï¸âƒ£ TÃ©nyleges CK 2ï¸âƒ£ RÃ©szleges CK 3ï¸âƒ£ MemÃ³ria CK ðŸ“Œ CK-t kizÃ¡rÃ³lag admin jelenlÃ©tÃ©ben lehet vÃ©grehajtani! (KivÃ©tel: Memo CK, amihez nem szÃ¼ksÃ©ges admin.) ðŸ“Œ CK csak akkor engedÃ©lyezett, ha nyomÃ³s oka van! ðŸ“Œ CK vÃ©gÃ©n az admin dÃ¶nti el, hogy jogos volt-e a vÃ©grehajtÃ¡s. ðŸ“Œ BizonyÃ­tÃ©k nÃ©lkÃ¼l CK nem kezdhetÅ‘ meg! CK elÅ‘tt minden bizonyÃ­tÃ©kot el kell kÃ¼ldeni az adminnak. Elfogadott formÃ¡tum: kÃ©p, videÃ³ vagy hangfelvÃ©tel.</p>
+                    <details class="sub-accordion">
+                        <summary>ðŸ“‚ SzÃ¼ksÃ©ges bizonyÃ­tÃ©kok CK-hoz</summary>
+                        <p>âœ… Minimum 24 Ã³rÃ¡val elÅ‘re jelezni az erre kijelÃ¶lt Discord-szobÃ¡ban. âœ… A cÃ©lpont teljes IC nevÃ©t meg kell adni. âœ… Minden indokot rÃ©szletesen le kell Ã­rni, amiÃ©rt CK-t akarsz indÃ­tani.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ§  MemÃ³ria CK (MemoCK)</summary>
+                        <p>ðŸ‘¥ Csak sajÃ¡t frakciÃ³tag lehet cÃ©lpont, de civil is belefÃ©rhet. ðŸ—‘ï¸ Teljes memÃ³riavesztÃ©s â€“ minden informÃ¡ciÃ³t elfelejt: frakciÃ³ HQ, pÃ©nzmosÃ³, illegÃ¡lis helyek, minden IC tudÃ¡s. ðŸ†” NÃ©vvÃ¡ltÃ¡s nem kÃ¶telezÅ‘. ðŸ“… Minimum 1 hÃ©t IC ismeretsÃ©g szÃ¼ksÃ©ges (kivÃ©tel: frakciÃ³tag CK). ðŸŽ­ Minimum 10 percet igÃ©nylÅ‘ RP szÃ¼ksÃ©ges. â— Admin jelenlÃ©t nem kÃ¶telezÅ‘.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ©¹ RÃ©szleges CK</summary>
+                        <p>ðŸ‘¥ Lehet sajÃ¡t frakciÃ³bÃ³l, mÃ¡s frakciÃ³bÃ³l vagy akÃ¡r civil. ðŸ—‘ï¸ Teljes memÃ³riavesztÃ©s, ugyanÃºgy, mint Memo CK esetÃ©ben. ðŸ†” NÃ©vvÃ¡ltÃ¡s kÃ¶telezÅ‘! ðŸ“… Minimum 2 hÃ©t IC ismeretsÃ©g szÃ¼ksÃ©ges (kivÃ©tel: frakciÃ³tag CK). ðŸŽ­ Minimum 25 perces RP kÃ¶telezÅ‘. ðŸ’° VagyonvesztÃ©s: a jÃ¡tÃ©kos elveszÃ­ti a vagyona 30%-Ã¡t (autÃ³k, pÃ©nz, tÃ¡rolt tÃ¡rgyak). (Az Ã¡ltalad vÃ¡sÃ¡rolt PP-s tÃ¡rgyak nem vesznek el!) â— Admin jelenlÃ©t szÃ¼ksÃ©ges.</p>
+                    </details>
+                    <details class="sub-accordion">
+                        <summary>ðŸ’€ TÃ©nyleges CK</summary>
+                        <p>ðŸ‘¥ CÃ©lpont lehet mÃ¡s frakciÃ³ tagja vagy civil. ðŸ—‘ï¸ Teljes memÃ³riavesztÃ©s + teljes karakter tÃ¶rlÃ©s. (Az Ã¡ltalad vÃ¡sÃ¡rolt PP-s tÃ¡rgyak itt is megmaradnak!) ðŸ“… Minimum 3 hÃ©t IC ismeretsÃ©g szÃ¼ksÃ©ges (kivÃ©tel: frakciÃ³tag CK). ðŸŽ­ Minimum 45 perces RP kell. â— Admin jelenlÃ©t kÃ¶telezÅ‘.</p>
+                    </details>
                 </div>
-            </div>
-
-            <!-- VI. Rablási szabályok -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('robbery')">
-                    <h2>💰 VI. Rablási szabályok</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="robbery">
-                    <div class="subsection">
-                        <h3>📌 Általános rablási irányelvek</h3>
-                        <ul class="allowed-list">
-                            <li>✅ Fizetett túsz lehet, de saját frakciótag vagy szövetséges nem!</li>
-                            <li>✅ Védett játékos, ha hergel, elveszti a védettségét.</li>
-                        </ul>
-                        <p>💵 Rabláskor max. 10.000$ készpénz rabolható, fegyverek & illegális tárgyak korlátlanul.</p>
-                        <p>🔒 Egy személy csak egyszer lootolható egy adott akcióban.</p>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🚨 Rablási menetrend</h3>
-                        <p><strong>⏱ Restart előtt:</strong></p>
-                        <ul>
-                            <li>30 perccel: részleges illegál stop</li>
-                            <li>10 perccel: teljes illegál stop</li>
-                            <li>Restart után 20 perc: részleges stop</li>
-                        </ul>
-                        <ul>
-                            <li>👮 Ha rendőrség „govol", kötelező megvárni őket.</li>
-                            <li>🔫 Túsztárgyalás közben nem hagyhatod el a helyszínt.</li>
-                            <li>🚔 Rendvédelem max. 2 járművel több egységet hozhat, mint az illegál.</li>
-                            <li>🏍 Minden rablásra max. 1 db motor vihető.</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>📊 Járműlimit rablásoknál</h3>
-                        <div class="robbery-limits">
-                            <div class="robbery-type">
-                                <h4>Boltrablás</h4>
-                                <p>Illegál: 3 jármű | Rendvédelem: 5 jármű</p>
-                            </div>
-                            <div class="robbery-type">
-                                <h4>Kis Bank</h4>
-                                <p>Illegál: 4 jármű | Rendvédelem: 6 jármű</p>
-                            </div>
-                            <div class="robbery-type">
-                                <h4>Nemzeti Bank</h4>
-                                <p>Illegál: 5 jármű | Rendvédelem: 7 jármű</p>
-                                <p><small>2 óránként rabolható, frakció naponta egyszer!</small></p>
-                            </div>
-                            <div class="robbery-type">
-                                <h4>Ékszerbolt</h4>
-                                <p>1 játékos túsz kötelező, max. 4 NPC túsz</p>
-                            </div>
-                            <div class="robbery-type">
-                                <h4>Kamion rablás</h4>
-                                <p>Illegál: 5 jármű | Rendvédelem: 7 jármű</p>
-                                <p><small>A kamion 50 km/h alatt robban!</small></p>
-                            </div>
-                        </div>
-                        <div class="warning">
-                            📌 Speciális rablásoknál (Humane, BobCat, Yacht) részletes egyedi szabályok érvényesek.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VII. Frakciók & Jump szabályok -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('factions')">
-                    <h2>🏴 VII. Frakciók & Jump szabályok</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="factions">
-                    <div class="subsection">
-                        <p><strong>Ha elhagynád a frakciót CK nélkül:</strong></p>
-                        <ul>
-                            <li>Jelezned kell a Leadernek, aki 7 nap „Jumpra" tesz.</li>
-                            <li>Nincs név- vagy külsőváltoztatás – vállalnod kell a karaktered múltját.</li>
-                            <li>Jump kifizetése tilos, a 7 napot ki kell várnod.</li>
-                        </ul>
-                        <div class="jump-rules">
-                            <p><strong>Jump időszakok:</strong></p>
-                            <ul>
-                                <li>Kevesebb, mint 1 hét frakcióban → 1 hét jump</li>
-                                <li>Több, mint 1 hét → 3 nap jump</li>
-                            </ul>
-                        </div>
-                        <p>Frakció Jump ranggal csak más „frakció nélküli" játékosokkal mozoghatsz.</p>
-                        <p>Egy játékos csak akkor lehet frakció tagja, ha Discordon is megkapta a megfelelő rangot.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VIII. Tiltott RP-k -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('forbidden-rp')">
-                    <h2>☠️ VIII. Tiltott RP-k & egyéb súlyos szabályok</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="forbidden-rp">
-                    <div class="subsection">
-                        <h3>🚫 Erősen tiltott RP-típusok</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Nemi erőszak</li>
-                            <li>❌ Pedofília</li>
-                            <li>❌ Kannibalizmus</li>
-                            <li>❌ Bestialitás</li>
-                            <li>❌ Nekrofília</li>
-                            <li>❌ Feldarabolás</li>
-                            <li>❌ Szexuális RP (kivéve ha mindkét fél beleegyezik, de forgalmas helyen tilos)</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>🪦 Hullagyalázás</h3>
-                        <ul class="forbidden-list">
-                            <li>❌ Tilos köpködni, levizelni, sértően beszélni a holttesthez.</li>
-                            <li>❌ Tilos „lehajolok az ÖCSKÖSHÖZ" kifejezés használata lootoláskor.</li>
-                            <li>❌ Tilos Twitterre vagy máshova képet feltölteni a hulláról.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IX. Alapfogalmak -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('terms')">
-                    <h2>⚠️ IX. Alapfogalmak</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="terms">
-                    <div class="term">
-                        <h3>⚠️ PG – PowerGaming</h3>
-                        <p><strong>Meghatározás:</strong> Azoknak a cselekedeteknek az összessége, amelyeket a való életben nem mernél megtenni, vagy amelyek teljesen irreálisak a karaktered képességeihez képest.</p>
-                        <ul>
-                            <li>🚗 Autóból autóba nincs PG – járművekkel való akciózás külön szabályokhoz kötött.</li>
-                            <li>🔫 Három ember egy fegyverrel egy autósra fogja a fegyvert → PG-nek számít.</li>
-                            <li>📦 Ha „bedobozolnak" → meg kell adnod magad!</li>
-                            <li>🔫 Ha rád fogják a fegyvert, nem veheted elő a sajátodat (kivétel: ha a kezedben van).</li>
-                        </ul>
-                    </div>
-
-                    <div class="term">
-                        <h3>🎭 MG – MetaGaming</h3>
-                        <p><strong>Meghatározás:</strong> Amikor OOC információt IC helyzetben használsz.</p>
-                        <p>Mivel a szerveren van rádió és telefon, szigorúan tilos Discordról vagy bármilyen külső platformról szerzett információt IC-ben felhasználni.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🔄 RK – RevengeKill</h3>
-                        <p><strong>Meghatározás:</strong> Halál utáni bosszúállás.</p>
-                        <p>Ha egy RP-szituációban meghaltál, nem térhetsz vissza addig, amíg az RP folytatódik.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>💀 DM – DeathMatch</h3>
-                        <p><strong>Meghatározás:</strong> Ok nélküli ölés.</p>
-                        <p>Nyomós indok nélkül nem ölhetsz meg senkit!</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🚗 DB – DriveBy</h3>
-                        <p><strong>Meghatározás:</strong> Járművel történő ölés.</p>
-                        <p>Ha az úton mész, meglátsz egy játékost és elütöd, aminek következtében a karaktere meghal → DB.</p>
-                        <p><strong>❗ Kivétel:</strong> Ha téged vagy társadat lövik, megvédheted magad azzal, hogy elgázolod a támadót (max. 2 főt!).</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🚙 VDM – Vehicle DeathMatch</h3>
-                        <p><strong>Meghatározás:</strong> Amikor indokolatlanul, többször mész át valakin, amíg meg nem hal.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🎭 NonRP</h3>
-                        <p><strong>Meghatározás:</strong> Olyan cselekedetek összessége, amelyek nem kapcsolódnak a realitáshoz, és megtörik az RP élményt.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🛑 SK – SpawnKill</h3>
-                        <p><strong>Meghatározás:</strong> Spawnoláskor történő azonnali megölés.</p>
-                        <p>Ha egy játékos épp ingatlant használ, nem ölheted meg azonnal – pár másodperc mozgásidőt adni kell neki.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🎭 ForceRP</h3>
-                        <p><strong>Meghatározás:</strong> Saját RP ráerőltetése más játékosra.</p>
-                        <p>Semmilyen helyzetben nem kényszerítheted a saját RP-det másra!</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🏢 HQ – HeadQuarter</h3>
-                        <p><strong>Meghatározás:</strong> Frakciók területe, bázisa (a térképen jelölve).</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🚨 HQ Raid</h3>
-                        <p><strong>Meghatározás:</strong> Amikor a frakció lezárt területére (pl. kerítéssel körbekerített HQ) betörsz vagy belősz.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🎭 IC / OOC Fogalmak</h3>
-                        <p><strong>IC (In Character):</strong> A karaktered történetéhez, személyiségéhez kötődő minden dolog.</p>
-                        <p><strong>OOC (Out of Character):</strong> Amit te, mint játékos teszel, de a karaktered világán kívül esik.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🎭 Szereptévesztés</h3>
-                        <p><strong>Meghatározás:</strong> Minden olyan cselekedet, amely nem tükrözi a karaktered személyiségét.</p>
-                        <p><strong>Példa:</strong> Rendőrként boltot rabolsz.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>🚁 HK – Helikopter Kill</h3>
-                        <p><strong>Meghatározás:</strong> Amikor szándékosan a helikopter rotorjával megölsz egy másik játékost.</p>
-                    </div>
-
-                    <div class="term">
-                        <h3>📘 További Fogalmak</h3>
-                        <ul>
-                            <li><strong>Ban:</strong> A szerverről való kitiltás (lehet határozott vagy határozatlan időre).</li>
-                            <li><strong>Kick:</strong> A szerverről való kirúgás (a játékos utána visszacsatlakozhat).</li>
-                            <li><strong>Közmunka:</strong> Adminok által kiszabott büntetés.</li>
-                            <li><strong>Crash:</strong> Játékhiba, ami a játék leállásához vezet.</li>
-                            <li><strong>IRL (In Real Life):</strong> A való élet.</li>
-                            <li><strong>Item:</strong> Olyan tárgy, ami csak a szerveren használható.</li>
-                            <li><strong>RP (RolePlay):</strong> Szerepjáték, valósághű viselkedés.</li>
-                            <li><strong>TGF (Tagfelvétel):</strong> Frakciók tagfelvétele szerveren vagy Discordon.</li>
-                            <li><strong>AFK (Away From Keyboard):</strong> Amikor a játékos távol van a géptől.</li>
-                            <li><strong>Interior:</strong> Épületek belső terei.</li>
-                            <li><strong>Exterior:</strong> Épületek külső terei.</li>
-                            <li><strong>PK (Panaszkönyv):</strong> Jelentések, panaszok leadására szolgáló rendszer.</li>
-                            <li><strong>BTK (Büntetőkönyv):</strong> A szerveren alkalmazott büntetési szabályzat.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- X. CK Szabályzat -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('ck-rules')">
-                    <h2>⚖️ X. CK Szabályzat – Általános Tudnivalók</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="ck-rules">
-                    <div class="subsection">
-                        <h3>Három típusa van a CK-nak:</h3>
-                        <ul>
-                            <li>1️⃣ Tényleges CK</li>
-                            <li>2️⃣ Részleges CK</li>
-                            <li>3️⃣ Memória CK</li>
-                        </ul>
-                        
-                        <div class="warning">
-                            <p>📌 CK-t kizárólag admin jelenlétében lehet végrehajtani! (Kivétel: Memo CK)</p>
-                            <p>📌 CK csak akkor engedélyezett, ha nyomós oka van!</p>
-                            <p>📌 CK végén az admin dönti el, hogy jogos volt-e a végrehajtás.</p>
-                            <p>📌 Bizonyíték nélkül CK nem kezdhető meg!</p>
-                        </div>
-                    </div>
-
-                    <div class="subsection">
-                        <h3>📂 Szükséges bizonyítékok CK-hoz</h3>
-                        <ul class="allowed-list">
-                            <li>✅ Minimum 24 órával előre jelezni az erre kijelölt Discord-szobában.</li>
-                            <li>✅ A célpont teljes IC nevét meg kell adni.</li>
-                            <li>✅ Minden indokot részletesen le kell írni.</li>
-                        </ul>
-                        <p>Elfogadott formátum: kép, videó vagy hangfelvétel.</p>
-                    </div>
-
-                    <div class="ck-type">
-                        <h3>🧠 Memória CK (MemoCK)</h3>
-                        <ul>
-                            <li>👥 Csak saját frakciótag lehet célpont, de civil is beleférhet.</li>
-                            <li>🗑️ Teljes memóriavesztés – minden információt elfelejt.</li>
-                            <li>🆔 Névváltás nem kötelező.</li>
-                            <li>📅 Minimum 1 hét IC ismeretség szükséges (kivétel: frakciótag CK).</li>
-                            <li>🎭 Minimum 10 percet igénylő RP szükséges.</li>
-                            <li>❗ Admin jelenlét nem kötelező.</li>
-                        </ul>
-                    </div>
-
-                    <div class="ck-type">
-                        <h3>🩹 Részleges CK</h3>
-                        <ul>
-                            <li>👥 Lehet saját frakcióból, más frakcióból vagy akár civil.</li>
-                            <li>🗑️ Teljes memóriavesztés, ugyanúgy, mint Memo CK esetében.</li>
-                            <li>🆔 Névváltás kötelező!</li>
-                            <li>📅 Minimum 2 hét IC ismeretség szükséges (kivétel: frakciótag CK).</li>
-                            <li>🎭 Minimum 25 perces RP kötelező.</li>
-                            <li>💰 Vagyonvesztés: a játékos elveszíti a vagyona 30%-át.</li>
-                            <li>❗ Admin jelenlét szükséges.</li>
-                        </ul>
-                        <div class="note">(Az általad vásárolt PP-s tárgyak nem vesznek el!)</div>
-                    </div>
-
-                    <div class="ck-type">
-                        <h3>💀 Tényleges CK</h3>
-                        <ul>
-                            <li>👥 Célpont lehet más frakció tagja vagy civil.</li>
-                            <li>🗑️ Teljes memóriavesztés + teljes karakter törlés.</li>
-                            <li>📅 Minimum 3 hét IC ismeretség szükséges (kivétel: frakciótag CK).</li>
-                            <li>🎭 Minimum 45 perces RP kell.</li>
-                            <li>❗ Admin jelenlét kötelező.</li>
-                        </ul>
-                        <div class="note">(Az általad vásárolt PP-s tárgyak itt is megmaradnak!)</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- XI. Szankció Táblázat -->
-            <div class="rule-section">
-                <div class="rule-header" onclick="toggleSection('sanctions')">
-                    <h2>📑 XI. Admin Szankció Táblázat</h2>
-                    <span class="toggle-icon">+</span>
-                </div>
-                <div class="rule-content" id="sanctions">
-                    <div class="sanctions-table">
-                        <div class="sanction-row header">
-                            <div class="violation">Szabályszegés</div>
-                            <div class="punishment">Szankció</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">OOC beszéd / IC keverés</div>
-                            <div class="punishment">Figyelmeztetés → Kick → Ban</div>
-                        </div>
-                        <div class="sanction-row severe">
-                            <div class="violation">Mod, hack, cheat használata</div>
-                            <div class="punishment">Azonnali ÖRÖK BAN</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">Bug kihasználás (nem jelentve)</div>
-                            <div class="punishment">7-30 napos BAN</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">Rablási szabály megszegése</div>
-                            <div class="punishment">Admin döntés szerint (Kick / Jail)</div>
-                        </div>
-                        <div class="sanction-row severe">
-                            <div class="violation">Szexuális / erőszakos RP</div>
-                            <div class="punishment">Azonnali BAN</div>
-                        </div>
-                        <div class="sanction-row severe">
-                            <div class="violation">Más szerver hirdetése</div>
-                            <div class="punishment">Azonnali BAN</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">OOC kereskedelem</div>
-                            <div class="punishment">30 napos BAN</div>
-                        </div>
-                        <div class="sanction-row severe">
-                            <div class="violation">Admin fenyegetése</div>
-                            <div class="punishment">Azonnali BAN</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">Vagyon szétosztás</div>
-                            <div class="punishment">7 napos BAN</div>
-                        </div>
-                        <div class="sanction-row severe">
-                            <div class="violation">Tilos programok használata</div>
-                            <div class="punishment">Azonnali BAN</div>
-                        </div>
-                        <div class="sanction-row">
-                            <div class="violation">Account megosztás</div>
-                            <div class="punishment">7 napos BAN</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2024 Imperium Roleplay - Minden jog fenntartva</p>
-            <p>A szabályzat módosításának jogát fenntartjuk</p>
-            <a href="https://discord.gg/sRedAXTCa9" target="_blank" class="footer-discord">
-                💬 Csatlakozz Discordunkra
-            </a>
-        </footer>
-    </div>
+            </details>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
