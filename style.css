@@ -196,15 +196,16 @@ body {
 
 .rule-content {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.8) 100%);
-    padding: 0;
+    padding: 0 25px;
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .rule-content.active {
     padding: 25px;
-    max-height: none;
+    overflow: visible;
 }
 
 .subsection {
