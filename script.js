@@ -5,41 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fő inicializáló függvény
 function initializeRulebook() {
-    initializeToggleSystem();
     initializeSearchFunction();
     initializeAnimations();
     addEventListeners();
 }
 
-// Toggle rendszer inicializálása
-function initializeToggleSystem() {
-    const ruleHeaders = document.querySelectorAll('.rule-header');
-    
-    ruleHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const targetId = this.getAttribute('onclick')?.match(/toggleSection\('([^']+)'\)/)?.[1];
-            if (targetId) {
-                toggleSection(targetId);
-            }
-        });
-        
-        // Hozzáférhetőség javítása
-        header.setAttribute('tabindex', '0');
-        header.setAttribute('role', 'button');
-        header.setAttribute('aria-expanded', 'false');
-        
-        // Billentyűzet támogatás
-        header.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                this.click();
-            }
-        });
-    });
-}
-
-// Szekció toggle függvény
-function toggleSection(sectionId) {
+// Globális toggle függvény
+window.toggleSection = function(sectionId) {
     const content = document.getElementById(sectionId);
     const header = content?.previousElementSibling;
     const toggleIcon = header?.querySelector('.toggle-icon');
@@ -48,26 +20,29 @@ function toggleSection(sectionId) {
     
     const isCurrentlyOpen = content.classList.contains('active');
     
-    // Ha már nyitva van, zárjuk be
     if (isCurrentlyOpen) {
+        // Bezárás
         content.classList.remove('active');
         toggleIcon.classList.remove('active');
         toggleIcon.textContent = '+';
         header.setAttribute('aria-expanded', 'false');
         
-        // Animáció a bezáráshoz
+        // Stílus beállítások a bezáráshoz
         content.style.maxHeight = '0px';
         content.style.padding = '0 25px';
+        content.style.overflow = 'hidden';
+        
     } else {
-        // Ha zárva van, nyissuk ki
+        // Kinyitás
         content.classList.add('active');
         toggleIcon.classList.add('active');
         toggleIcon.textContent = '−';
         header.setAttribute('aria-expanded', 'true');
         
-        // Animáció a nyitáshoz
-        content.style.maxHeight = content.scrollHeight + 'px';
+        // Stílus beállítások a kinyitáshoz
+        content.style.maxHeight = content.scrollHeight + 50 + 'px'; // extra hely a paddingnek
         content.style.padding = '25px';
+        content.style.overflow = 'visible';
         
         // Smooth scroll a szekcióhoz
         setTimeout(() => {
@@ -78,31 +53,7 @@ function toggleSection(sectionId) {
             });
         }, 100);
     }
-    
-    // Egyéb szekciók bezárása (accordion effect)
-    // Ezt kikommentelheted, ha nem szeretnéd az accordion működést
-    /*
-    const allContents = document.querySelectorAll('.rule-content');
-    allContents.forEach(otherContent => {
-        if (otherContent !== content && otherContent.classList.contains('active')) {
-            const otherHeader = otherContent.previousElementSibling;
-            const otherToggleIcon = otherHeader?.querySelector('.toggle-icon');
-            
-            otherContent.classList.remove('active');
-            if (otherToggleIcon) {
-                otherToggleIcon.classList.remove('active');
-                otherToggleIcon.textContent = '+';
-            }
-            if (otherHeader) {
-                otherHeader.setAttribute('aria-expanded', 'false');
-            }
-            
-            otherContent.style.maxHeight = '0px';
-            otherContent.style.padding = '0 25px';
-        }
-    });
-    */
-}
+};
 
 // Keresési funkció inicializálása
 function initializeSearchFunction() {
@@ -167,8 +118,9 @@ function performSearch(searchTerm) {
             
             if (ruleContent && !ruleContent.classList.contains('active')) {
                 ruleContent.classList.add('active');
-                ruleContent.style.maxHeight = ruleContent.scrollHeight + 'px';
+                ruleContent.style.maxHeight = ruleContent.scrollHeight + 50 + 'px';
                 ruleContent.style.padding = '25px';
+                ruleContent.style.overflow = 'visible';
                 
                 if (toggleIcon) {
                     toggleIcon.classList.add('active');
@@ -353,41 +305,6 @@ function addEventListeners() {
             });
         }, 250);
     });
-}
-
-// Globális toggle függvény (a HTML onclick attribútumokhoz)
-function toggleSection(sectionId) {
-    const content = document.getElementById(sectionId);
-    const header = content?.previousElementSibling;
-    const toggleIcon = header?.querySelector('.toggle-icon');
-    
-    if (!content || !header || !toggleIcon) return;
-    
-    const isCurrentlyOpen = content.classList.contains('active');
-    
-    if (isCurrentlyOpen) {
-        content.classList.remove('active');
-        toggleIcon.classList.remove('active');
-        toggleIcon.textContent = '+';
-        header.setAttribute('aria-expanded', 'false');
-        content.style.maxHeight = '0px';
-        content.style.padding = '0 25px';
-    } else {
-        content.classList.add('active');
-        toggleIcon.classList.add('active');
-        toggleIcon.textContent = '−';
-        header.setAttribute('aria-expanded', 'true');
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.style.padding = '25px';
-        
-        setTimeout(() => {
-            header.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start',
-                inline: 'nearest'
-            });
-        }, 100);
-    }
 }
 
 // Utility függvények
