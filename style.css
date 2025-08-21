@@ -1,736 +1,77 @@
-/* Reset és alapértelmezett stílusok */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-    color: #ffffff;
-    line-height: 1.6;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: black;
+    color: gold;
+    font-family: Arial, sans-serif;
+    margin: 0;
     padding: 20px;
 }
 
-/* Header stílusok */
-.header {
+header {
     text-align: center;
-    margin-bottom: 40px;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    border-radius: 20px;
-    border: 2px solid rgba(255, 215, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.header::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.03) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    margin-bottom: 20px;
 }
 
 .logo-container {
-    position: relative;
-    z-index: 2;
-}
-
-.logo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
-    transition: all 0.3s ease;
-}
-
-.logo:hover {
-    filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
-    transform: scale(1.05);
-}
-
-.title {
-    font-family: 'Orbitron', monospace;
-    font-size: 3rem;
-    font-weight: 900;
-    color: #FFD700;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
     margin-bottom: 10px;
-    letter-spacing: 3px;
 }
 
-.subtitle {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.2rem;
-    color: rgba(255, 215, 0, 0.8);
-    font-weight: 400;
-    letter-spacing: 2px;
-}
-
-/* Vezérlő elemek */
-.controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.search-container {
-    flex: 1;
-    min-width: 300px;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 15px 20px;
-    border: 2px solid rgba(255, 215, 0, 0.3);
-    border-radius: 50px;
-    background: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-#searchInput:focus {
-    outline: none;
-    border-color: #FFD700;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    transform: translateY(-2px);
-}
-
-#searchInput::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
 }
 
 .discord-btn {
-    background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
-    color: #ffffff;
-    padding: 15px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
-}
-
-.discord-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
-    border-color: rgba(255, 215, 0, 0.3);
-}
-
-/* Szabály szekciók */
-.rules-container {
-    margin-bottom: 40px;
-}
-
-.rule-section {
-    margin-bottom: 20px;
-    border-radius: 15px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.rule-section:hover {
-    border-color: rgba(255, 215, 0, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.rule-header {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    padding: 20px 25px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-}
-
-.rule-header:hover {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 215, 0, 0.08) 100%);
-}
-
-.rule-header h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.4rem;
-    color: #FFD700;
-    font-weight: 700;
-}
-
-.toggle-icon {
-    font-size: 1.5rem;
-    color: #FFD700;
-    transition: transform 0.3s ease;
-    font-weight: bold;
-}
-
-.toggle-icon.active {
-    transform: rotate(45deg);
-}
-
-.rule-content {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.8) 100%);
-    padding: 0 25px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    border-top: 1px solid rgba(255, 215, 0, 0.1);
-}
-
-.rule-content.active {
-    padding: 25px;
-    overflow: visible;
-}
-
-.subsection {
-    margin-bottom: 25px;
-}
-
-.subsection:last-child {
-    margin-bottom: 0;
-}
-
-.subsection h3 {
-    color: #FFD700;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.subsection p {
-    margin-bottom: 12px;
-    color: #e0e0e0;
-    line-height: 1.7;
-}
-
-.subsection ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-.subsection li {
-    margin-bottom: 8px;
-    color: #e0e0e0;
-    line-height: 1.6;
-}
-
-/* Speciális lista stílusok */
-.forbidden-list li {
-    color: #ff6b6b;
-    list-style: none;
-    position: relative;
-}
-
-.allowed-list li {
-    color: #51cf66;
-    list-style: none;
-    position: relative;
-}
-
-.forbidden-list li::before,
-.allowed-list li::before {
-    margin-right: 8px;
-}
-
-/* Figyelmeztetések és megjegyzések */
-.warning {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
-    border: 1px solid rgba(255, 107, 107, 0.3);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-    color: #ffb3b3;
-}
-
-.warning p {
-    margin-bottom: 8px;
-    color: #ffb3b3;
-}
-
-.warning p:last-child {
-    margin-bottom: 0;
-}
-
-.note {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.3);
-    border-radius: 10px;
-    padding: 10px 15px;
-    margin: 10px 0;
-    color: #ffd93d;
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-.allowed {
-    color: #51cf66;
-    font-weight: 500;
-}
-
-.forbidden {
-    color: #ff6b6b;
-    font-weight: 500;
-}
-
-/* Technikai tiltások */
-.tech-banned {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
-    border: 1px solid rgba(255, 107, 107, 0.3);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-    font-family: 'Orbitron', monospace;
-    color: #ff8a8a;
-    text-align: center;
-    font-weight: 500;
-    word-spacing: 5px;
-    line-height: 1.8;
-}
-
-/* Rablási limitekek */
-.robbery-limits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.robbery-type {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.robbery-type:hover {
-    border-color: rgba(255, 215, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-.robbery-type h4 {
-    color: #FFD700;
-    margin-bottom: 8px;
-    font-size: 1rem;
-}
-
-.robbery-type p {
-    color: #e0e0e0;
-    margin-bottom: 5px;
-}
-
-.robbery-type small {
-    color: rgba(255, 255, 255, 0.6);
-    font-style: italic;
-}
-
-/* Jump szabályok */
-.jump-rules {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px 0;
-}
-
-.jump-rules p {
-    color: #ffd93d;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
-
-.jump-rules ul {
-    margin-left: 20px;
-}
-
-.jump-rules li {
-    color: #e0e0e0;
-}
-
-/* Fogalmak (terms) */
-.term {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 215, 0, 0.02) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
-}
-
-.term:hover {
-    border-color: rgba(255, 215, 0, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.term h3 {
-    color: #FFD700;
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-    font-weight: 600;
-}
-
-.term p {
-    color: #e0e0e0;
-    margin-bottom: 10px;
-    line-height: 1.7;
-}
-
-.term p strong {
-    color: #FFD700;
-}
-
-.term ul {
-    margin-left: 20px;
-}
-
-.term li {
-    color: #e0e0e0;
-    margin-bottom: 6px;
-}
-
-/* CK típusok */
-.ck-type {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 215, 0, 0.03) 100%);
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
-    transition: all 0.3s ease;
-}
-
-.ck-type:hover {
-    border-color: rgba(255, 215, 0, 0.4);
-    transform: translateY(-2px);
-}
-
-.ck-type h3 {
-    color: #FFD700;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    text-align: center;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.ck-type ul {
-    margin-left: 20px;
-}
-
-.ck-type li {
-    color: #e0e0e0;
-    margin-bottom: 8px;
-    line-height: 1.6;
-}
-
-/* Szankció táblázat */
-.sanctions-table {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 20, 0.6) 100%);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-}
-
-.sanction-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.sanction-row:last-child {
-    border-bottom: none;
-}
-
-.sanction-row:hover {
-    background: rgba(255, 215, 0, 0.05);
-}
-
-.sanction-row.header {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
-    font-weight: 700;
-}
-
-.sanction-row.header:hover {
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
-}
-
-.sanction-row.severe {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%);
-}
-
-.sanction-row.severe:hover {
-    background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 107, 107, 0.08) 100%);
-}
-
-.violation, .punishment {
-    padding: 15px 20px;
-    color: #e0e0e0;
-}
-
-.sanction-row.header .violation,
-.sanction-row.header .punishment {
-    color: #FFD700;
-    font-size: 1.1rem;
-}
-
-.sanction-row.severe .violation,
-.sanction-row.severe .punishment {
-    color: #ff8a8a;
-    font-weight: 500;
-}
-
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 215, 0, 0.2);
-    margin-top: 40px;
-}
-
-.footer p {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.footer-discord {
     display: inline-block;
-    background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%);
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 25px;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    margin-top: 15px;
-    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
-}
-
-.footer-discord:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
-}
-
-/* Keresési kiemelés */
-.highlight {
-    background-color: rgba(255, 215, 0, 0.3);
-    padding: 2px 4px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-weight: bold;
 }
 
-/* Scroll animációk */
-.rule-section {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+.search-section {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.rule-section:nth-child(1) { animation-delay: 0.1s; }
-.rule-section:nth-child(2) { animation-delay: 0.2s; }
-.rule-section:nth-child(3) { animation-delay: 0.3s; }
-.rule-section:nth-child(4) { animation-delay: 0.4s; }
-.rule-section:nth-child(5) { animation-delay: 0.5s; }
-.rule-section:nth-child(6) { animation-delay: 0.6s; }
-.rule-section:nth-child(7) { animation-delay: 0.7s; }
-.rule-section:nth-child(8) { animation-delay: 0.8s; }
-.rule-section:nth-child(9) { animation-delay: 0.9s; }
-.rule-section:nth-child(10) { animation-delay: 1.0s; }
-.rule-section:nth-child(11) { animation-delay: 1.1s; }
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#searchInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid gold;
+    background-color: black;
+    color: gold;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-    
-    .title {
-        font-size: 2rem;
-        letter-spacing: 1px;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-        letter-spacing: 1px;
-    }
-    
-    .controls {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .search-container {
-        min-width: auto;
-        margin-bottom: 15px;
-    }
-    
-    .discord-btn {
-        justify-content: center;
-        width: 100%;
-    }
-    
-    .rule-header {
-        padding: 15px 20px;
-    }
-    
-    .rule-header h2 {
-        font-size: 1.2rem;
-    }
-    
-    .rule-content.active {
-        padding: 20px;
-    }
-    
-    .robbery-limits {
-        grid-template-columns: 1fr;
-    }
-    
-    .sanctions-table .sanction-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .violation {
-        border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-        padding-bottom: 10px;
-        font-weight: 600;
-        color: #FFD700;
-    }
-    
-    .punishment {
-        padding-top: 10px;
-    }
-    
-    .logo {
-        width: 80px;
-        height: 80px;
-    }
+.accordion, .sub-accordion {
+    margin-bottom: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 1.5rem;
-    }
-    
-    .subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .rule-header {
-        padding: 12px 15px;
-    }
-    
-    .rule-content.active {
-        padding: 15px;
-    }
-    
-    .subsection {
-        margin-bottom: 20px;
-    }
-    
-    .term, .ck-type {
-        padding: 15px;
-    }
+summary {
+    background-color: rgba(255, 215, 0, 0.1);
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 8px;
+.accordion-content {
+    padding: 10px;
 }
 
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    border-radius: 4px;
-    transition: all 0.3s ease;
+th, td {
+    border: 1px solid gold;
+    padding: 8px;
+    text-align: left;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-}
-
-/* Egyéb finomítások */
-.rule-content {
-    backdrop-filter: blur(5px);
-}
-
-.rule-section:hover .rule-header h2 {
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-}
-
-/* Loading animáció */
-.container {
-    opacity: 0;
-    animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Hover effektek javítása */
-.subsection h3:hover {
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
-    transition: text-shadow 0.3s ease;
-}
-
-/* Focus állapotok javítása */
-.rule-header:focus-visible {
-    outline: 2px solid #FFD700;
-    outline-offset: 2px;
-}
-
-.discord-btn:focus-visible {
-    outline: 2px solid #FFD700;
-    outline-offset: 2px;
-}
-
-#searchInput:focus-visible {
-    outline: none;
+th {
+    background-color: rgba(255, 215, 0, 0.1);
 }
